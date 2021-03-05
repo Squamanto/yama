@@ -1,0 +1,7 @@
+
+keycloak:
+  realm: yama
+  resource: content-api
+  auth-server-url: http://keycloak:8080/auth
+  ssl-required: none
+  principal-attribute: preffered_username
