@@ -9,13 +9,14 @@ services:
       NGINX_PORT: 80
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./content-tool/frontend/build:/var/www/html
     depends_on:
       - yama-backend
-      - yama-content-tool
+    #  - yama-content-tool
       - keycloak
 
-  yama-content-tool:
-    build: ./content-tool
+  #yama-content-tool:
+  #  build: ./content-tool
 
   yama-backend:
     build: ./backend
